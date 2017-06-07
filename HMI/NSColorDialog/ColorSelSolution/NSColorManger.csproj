@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6BA49DC4-A05F-4600-A81D-EC156472FE64}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetSCADA6.Common.NSColorManger</RootNamespace>
+    <AssemblyName>NetSCADA6.Common.NSColorManger</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Brush\BrushData.cs" />
+    <Compile Include="Brush\BrushDataConverter.cs" />
+    <Compile Include="Brush\BrushDataEditor.cs" />
+    <Compile Include="Brush\BrushDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Brush\BrushDialog.Designer.cs">
+      <DependentUpon>BrushDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Info\NSHatchBrushInfo.cs" />
+    <Compile Include="Info\NSLinearGradientBrushInfo.cs" />
+    <Compile Include="Info\NSPathGradientBrushInfo.cs" />
+    <Compile Include="Info\NSSolidBrushInfo.cs" />
+    <Compile Include="Info\NSTextrueBrushInfo.cs" />
+    <Compile Include="Pen\PenData.cs" />
+    <Compile Include="Pen\PenDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pen\PenDialog.Designer.cs">
+      <DependentUpon>PenDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pen\PenDataConverter.cs" />
+    <Compile Include="Pen\PenDataEditor.cs" />
+    <Compile Include="Pen\PipleData.cs" />
+    <Compile Include="Tool.cs" />
+    <Compile Include="Define.cs" />
+    <Compile Include="Ex\ButtonEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ex\ControlState.cs" />
+    <Compile Include="Ex\ButtonColor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ex\GraphicsPathHelper.cs" />
+    <Compile Include="LinearGradient\BaseGradientUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LinearGradient\BaseGradientUserControl.Designer.cs">
+      <DependentUpon>BaseGradientUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LinearGradient\ColorBlendEx.cs" />
+    <Compile Include="LinearGradient\ColorBlendUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LinearGradient\ColorBlendUserControl.Designer.cs">
+      <DependentUpon>ColorBlendUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LinearGradient\LinearGradientUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LinearGradient\LinearGradientUserControl.Designer.cs">
+      <DependentUpon>LinearGradientUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LinearGradient\HScrollBarUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LinearGradient\HScrollBarUserControl.designer.cs">
+      <DependentUpon>HScrollBarUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preset\FlowCell.cs" />
+    <Compile Include="Preset\FlowCellUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Preset\FlowCellUserControl.Designer.cs">
+      <DependentUpon>FlowCellUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preset\FlowLayoutPanelEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Preset\Form_Message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preset\Form_Message.Designer.cs">
+      <DependentUpon>Form_Message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Ex\RoundStyle.cs" />
+    <Compile Include="Solid\SolidUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Solid\SolidUserControl.Designer.cs">
+      <DependentUpon>SolidUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solid\TextBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Solid\RGBUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Solid\RGBUserControl.designer.cs">
+      <DependentUpon>RGBUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solid\BaseColorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Solid\BaseColorControl.Designer.cs">
+      <DependentUpon>BaseColorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solid\PathGradientControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Solid\PathGradientControl.Designer.cs">
+      <DependentUpon>PathGradientControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ex\UserControlEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Brush\BrushUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Brush\BrushUserControl.Designer.cs">
+      <DependentUpon>BrushUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Brush\BrushDialog.resx">
+      <DependentUpon>BrushDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinearGradient\BaseGradientUserControl.resx">
+      <DependentUpon>BaseGradientUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinearGradient\ColorBlendUserControl.resx">
+      <DependentUpon>ColorBlendUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinearGradient\LinearGradientUserControl.resx">
+      <DependentUpon>LinearGradientUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinearGradient\HScrollBarUserControl.resx">
+      <DependentUpon>HScrollBarUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pen\PenDialog.resx">
+      <DependentUpon>PenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preset\FlowCellUserControl.resx">
+      <DependentUpon>FlowCellUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preset\Form_Message.resx">
+      <DependentUpon>Form_Message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solid\SolidUserControl.resx">
+      <DependentUpon>SolidUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solid\RGBUserControl.resx">
+      <DependentUpon>RGBUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solid\BaseColorControl.resx">
+      <DependentUpon>BaseColorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solid\PathGradientControl.resx">
+      <DependentUpon>PathGradientControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Brush\BrushUserControl.resx">
+      <DependentUpon>BrushUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(TargetPath)" "..\..\..\..\..\$(OutDir)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

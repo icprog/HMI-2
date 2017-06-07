@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Root>
+  <Drivers>
+    <NSModbusTcp>
+      <dev4 Guid="7b262b73-433f-4efc-b8c8-0758b56c7602">
+        <DrvName>NSModbusTcp</DrvName>
+        <CommType>1</CommType>
+        <CommPara>,,127.0.0.2,502,Tcp,Client</CommPara>
+        <DevName>dev4</DevName>
+        <Enable>true</Enable>
+        <Station>1</Station>
+        <TimeOut>1000</TimeOut>
+        <Retries>3</Retries>
+        <DBs>
+          <DB1 Guid="0820bdb3-feff-441d-840d-841f37580fc1">
+            <DBName>DB1</DBName>
+            <Enable>true</Enable>
+            <PollRate>100000000</PollRate>
+            <TagMode>false</TagMode>
+            <TagAsVariable>false</TagAsVariable>
+            <Register>4</Register>
+            <AddrStart>1</AddrStart>
+            <AddrEnd>10</AddrEnd>
+          </DB1>
+          <DB2 Guid="82b7cf6d-9dfb-4370-8f28-507c76382138">
+            <DBName>DB2</DBName>
+            <Enable></Enable>
+            <PollRate>100000000</PollRate>
+            <TagMode>false</TagMode>
+            <TagAsVariable>false</TagAsVariable>
+          </DB2>
+          <DB2562 Guid="4ac1208f-bae6-42f9-ba24-82cec73f3361">
+            <DBName>DB2562</DBName>
+            <Enable>true</Enable>
+            <PollRate>100000000</PollRate>
+            <TagMode>false</TagMode>
+            <TagAsVariable>false</TagAsVariable>
+            <Register>4</Register>
+            <AddrStart>1</AddrStart>
+            <AddrEnd>10</AddrEnd>
+          </DB2562>
+        </DBs>
+      </dev4>
+    </NSModbusTcp>
+    <NSEPLC>
+      <Dev1 Guid="75561ab2-6127-47a8-a9bf-5bb0accbacb2">
+        <DrvName>NSEPLC</DrvName>
+        <CommType>1</CommType>
+        <CommPara>,,10.1.20.96,1025,Tcp,Client</CommPara>
+        <DevName>Dev1</DevName>
+        <Enable>true</Enable>
+        <Station>14</Station>
+        <TimeOut>1000</TimeOut>
+        <Retries>3</Retries>
+        <DBs>
+          <DB1 Guid="3bd8363b-8578-40ae-80a6-1fd3fc301939">
+            <DBName>DB1</DBName>
+            <Enable>true</Enable>
+            <PollRate>10</PollRate>
+            <TagMode>false</TagMode>
+            <AddressList>X[1-11],X[12-22],X[23-30],X[35-40],X[42-50],X[57-60],X[65-70],X[73-77],X[100-110],X[114-150],Y[1-11],Y[12-22],Y[23-30],Y[35-40],Y[42-50],Y[57-60],Y[65-70],Y[73-77],Y[100-110],Y[114-150],S[1-10],S[12-22],S[23-30],S[35-40],S[42-50],S[57-60],S[65-89],S[97-120],S[125-200],S[220-300],M[1-10],M[12-22],M[23-30],M[35-40],M[42-50],M[57-60],M[65-89],M[97-120],M[125-200],M[220-300],SPM[1-10],SPM[12-22],SPM[23-30],SM[35-40],SPM[42-50],SPM[57-60],SPM[65-89],SPM[97-120],SPM[125-200],SPM[220-300],T[1-10],T[12-22],T[23-30],T[35-40],T[42-50],T[57-60],T[65-89],T[97-120],T[125-200],T[220-300],TS[1-10],TS[12-22],TS[23-30],TS[35-40],TS[42-50],TS[57-60],TS[65-89],TS[97-120],TS[125-200],TS[220-300],C32[1-10],C32[12-22],C32[23-30],C32[35-40],C32[42-50],C32[57-60],C32[65-89],C32[97-120],C32[125-200],C32[220-300],CS32[1-10],CS32[12-22],CS32[23-30],CS32[35-40],CS32[42-50],CS32[57-60],CS32[65-89],CS32[97-120],CS32[125-200],CS32[220-300],C16[1-10],C16[12-22],C16[23-30],C16[35-40],C16[42-50],C16[57-60],C16[65-89],C16[97-120],C16[125-200]C16[220-300],CS16[1-10],CS16[12-22],CS16[23-30],CS16[35-40],CS16[42-50],CS16[57-60],CS16[65-89],CS16[97-120],CS16[125-200],CS16[220-300],D[1-10],D[12-22],D[23-30],D[35-40],D[42-50],D[57-60],D[65-89],D[97-120],D[125-200],D[220-300],SPD[1-10],SPD[12-22],SPD[23-30],SPD[35-40],SPD[42-50],SPD[57-60],SPD[65-89],SPD[97-120],SPD[125-200],SPD[220-300]</AddressList>
+          </DB1>
+        </DBs>
+      </Dev1>
+    </NSEPLC>
+    <NSModbusRTU>
+      <Dev2 Guid="2ee3d311-05b5-46be-9d51-9913d6fe967a">
+        <DrvName>NSModbusRTU</DrvName>
+        <CommType>0</CommType>
+        <CommPara>COM4,9600,8,1,0</CommPara>
+        <DevName>Dev2</DevName>
+        <Enable>true</Enable>
+        <Station>1</Station>
+        <TimeOut>1000</TimeOut>
+        <Retries>3</Retries>
+        <aaa>3</aaa>
+        <DBs>
+          <DB1 Guid="a55c5ac1-edea-45e2-8799-5e91fb6a4c71">
+            <DBName>DB1</DBName>
+            <Enable>true</Enable>
+            <PollRate>1000</PollRate>
+            <TagMode>false</TagMode>
+            <TagAsVariable>false</TagAsVariable>
+            <Register>4</Register>
+            <AddrStart>10</AddrStart>
+            <AddrEnd>100</AddrEnd>
+          </DB1>
+        </DBs>
+      </Dev2>
+    </NSModbusRTU>
+  </Drivers>
+  <Groups>
+    <dd Guid="7eee3fa5-19cd-4004-93bb-28eef796850c">dd</dd>
+    <eplc Guid="24cfce13-ed74-43b4-bf2b-ad30d5c52a37">
+      <GroupName>eplc</GroupName>
+      <GroupDescription></GroupDescription>
+    </eplc>
+    <RTU Guid="f47153bd-c70a-40dc-b731-e35f4fb44a4e">
+      <GroupName>RTU</GroupName>
+      <GroupDescription></GroupDescription>
+    </RTU>
+    <hh Guid="0a082c98-8f41-42c7-ae8b-82de0342736f">
+      <GroupName>hh</GroupName>
+      <GroupDescription></GroupDescription>
+    </hh>
+    <h1 Guid="fc275667-a3e4-44aa-a3d9-dd3544826586">
+      <GroupName>h1</GroupName>
+      <GroupDescription></GroupDescription>
+      <Parent>0a082c98-8f41-42c7-ae8b-82de0342736f</Parent>
+    </h1>
+    <hp Guid="2c135cc4-6460-481c-849d-80376dc967e2">
+      <GroupName>hp</GroupName>
+      <GroupDescription></GroupDescription>
+    </hp>
+    <h2 Guid="fa614ed2-ed78-4e4f-9214-59c8e12e6695">
+      <GroupName>h2</GroupName>
+      <GroupDescription></GroupDescription>
+      <Parent>fc275667-a3e4-44aa-a3d9-dd3544826586</Parent>
+    </h2>
+  </Groups>
+</Root>

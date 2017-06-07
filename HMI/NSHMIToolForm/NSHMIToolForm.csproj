@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D319133E-616C-4A87-96CA-F95BA85995F7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetSCADA6.HMI.NSHMIToolForm</RootNamespace>
+    <AssemblyName>NetSCADA6.HMI.NSHMIToolForm</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NetSCADA6.NSStudio.NSDockPanel">
+      <HintPath>..\..\bin\$(Configuration)\NetSCADA6.NSStudio.NSDockPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Toolbox">
+      <HintPath>..\Toolbox\obj\Debug\Toolbox.dll</HintPath>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.7.0.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\$(Configuration)\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ObjectView\MultiSelectTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectView\ObjectViewRs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ObjectViewRs.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectView\TreeViewColumns.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ObjectView\TreeViewColumns.designer.cs">
+      <DependentUpon>TreeViewColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToolboxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolboxForm.Designer.cs">
+      <DependentUpon>ToolboxForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ObjectView\ObjectViewRs.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ObjectViewRs.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjectView\TreeViewColumns.resx">
+      <DependentUpon>TreeViewColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxForm.resx">
+      <DependentUpon>ToolboxForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Show.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnLock.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(TargetPath)" "..\..\..\..\$(OutDir)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

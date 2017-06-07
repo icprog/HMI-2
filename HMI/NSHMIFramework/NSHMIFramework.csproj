@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1F69CF73-6960-44B6-8ACD-1739995C49F2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetSCADA6.HMI.NSHMIFramework</RootNamespace>
+    <AssemblyName>NetSCADA6.HMI.NSHMIFrameworkStudio</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="NetSCADA6.NSInterface">
+      <HintPath>..\..\bin\$(Configuration)\NetSCADA6.NSInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="NetSCADA6.NSStudio.NSDockPanel">
+      <HintPath>..\..\bin\$(Configuration)\NetSCADA6.NSStudio.NSDockPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="NetSCADA6.NSStudio.NSIProject">
+      <HintPath>..\..\bin\$(Configuration)\NetSCADA6.NSStudio.NSIProject.dll</HintPath>
+    </Reference>
+    <Reference Include="NetSCADA6.NSStudio.NSMoudleInterface">
+      <HintPath>..\..\bin\$(Configuration)\NetSCADA6.NSStudio.NSMoudleInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.7.0.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\$(Configuration)\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FileNode.cs" />
+    <Compile Include="FormOperation.cs" />
+    <Compile Include="FrameworkManager.cs" />
+    <Compile Include="HMIFramework.cs" />
+    <Compile Include="HMIStudio.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Rs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rs.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Rs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rs.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ToolFormManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NSDrawObj\NSDrawObj.csproj">
+      <Project>{53A670F8-A189-4376-AAC3-316E7A78EA7E}</Project>
+      <Name>NSDrawObj</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NSHMIForm\NSHMIForm.csproj">
+      <Project>{2A5FB5BD-EF1E-4F9C-AA87-860422217BDB}</Project>
+      <Name>NSHMIForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NSHMIInterface\NSHMIInterface.csproj">
+      <Project>{7AEA7AFC-F0B8-4E79-8603-C0976F03BAD9}</Project>
+      <Name>NSHMIInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NSHMIToolForm\NSHMIToolForm.csproj">
+      <Project>{D319133E-616C-4A87-96CA-F95BA85995F7}</Project>
+      <Name>NSHMIToolForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toolbox\Toolbox.csproj">
+      <Project>{3581F0CD-5B33-40F8-A664-F48D544FE0EF}</Project>
+      <Name>Toolbox</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="readme.txt" />
+    <None Include="Resources\AddDir.ico" />
+    <None Include="Resources\AddFile.ico" />
+    <None Include="Resources\Paste.ico" />
+    <None Include="Resources\file.ico" />
+    <None Include="Resources\dir.ico" />
+    <None Include="Resources\delete.ico" />
+    <None Include="Resources\copy.ico" />
+    <None Include="Resources\root.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Rs.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Rs.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rs.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Rs.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(TargetPath)" "..\..\..\..\$(OutDir)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

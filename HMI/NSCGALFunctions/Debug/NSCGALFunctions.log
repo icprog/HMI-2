@@ -1,0 +1,21 @@
+﻿Build started 2014-02-18 13:52:32.
+     1>Project "D:\NetSCADA\6.0\HMI\NSCGALFunctions\NSCGALFunctions.vcxproj" on node 2 (build target(s)).
+     1>PrepareForBuild:
+         Creating directory "D:\NetSCADA\6.0\HMI\Debug\".
+       InitializeBuildStatus:
+         Creating "Debug\NSCGALFunctions.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D NSCGALFUNCTIONS_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\NSCGALFunctions.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D NSCGALFUNCTIONS_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt dllmain.cpp
+         dllmain.cpp
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D NSCGALFUNCTIONS_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\NSCGALFunctions.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Intersection.cpp NSCGALFunctions.cpp
+         NSCGALFunctions.cpp
+         Intersection.cpp
+     1>d:\netscada\6.0\hmi\nscgalfunctions\intersection.cpp(4): fatal error C1083: Cannot open include file: 'boost/thread.hpp': No such file or directory
+         Generating Code...
+     1>Done Building Project "D:\NetSCADA\6.0\HMI\NSCGALFunctions\NSCGALFunctions.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:02.62

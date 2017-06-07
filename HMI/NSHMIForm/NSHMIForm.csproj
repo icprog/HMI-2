@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2A5FB5BD-EF1E-4F9C-AA87-860422217BDB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetSCADA6.HMI.NSHMIForm</RootNamespace>
+    <AssemblyName>NetSCADA6.HMI.NSHMIFormStudio</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NetSCADA6.Common.NSColorManger">
+      <HintPath>..\..\bin\$(Configuration)\NetSCADA6.Common.NSColorManger.dll</HintPath>
+    </Reference>
+    <Reference Include="NetSCADA6.NSScriptEditor">
+      <HintPath>..\..\bin\debug\NetSCADA6.NSScriptEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="NetSCADA6.NSStudio.NSDockPanel">
+      <HintPath>..\..\bin\$(Configuration)\NetSCADA6.NSStudio.NSDockPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.7.0.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\$(Configuration)\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LayerConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LayerConfigForm.Designer.cs">
+      <DependentUpon>LayerConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Rs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rs.resx</DependentUpon>
+    </Compile>
+    <Compile Include="StudioEnvironment\ControlPoint\ControlPointContainer.cs" />
+    <Compile Include="StudioEnvironment\ControlPoint\FormPoint.cs" />
+    <Compile Include="StudioEnvironment\ControlPoint\CustomPoint.cs" />
+    <Compile Include="StudioEnvironment\ControlPoint\FramePoint.cs" />
+    <Compile Include="StudioEnvironment\ControlPoint\NodePoint.cs" />
+    <Compile Include="StudioEnvironment\ControlPoint\SegmentPoint.cs" />
+    <Compile Include="StudioEnvironment\ControlPoint\SelectObjectManager.cs" />
+    <Compile Include="StudioEnvironment\CreateDrawObject.cs" />
+    <Compile Include="Define.cs" />
+    <Compile Include="StudioEnvironment\Studio.cs" />
+    <Compile Include="Environment.cs" />
+    <Compile Include="HMIForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMIForm.Designer.cs">
+      <DependentUpon>HMIForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudioEnvironment\ObjName.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RunEnvironment\Run.cs" />
+    <Compile Include="StudioEnvironment\Studio_ToolBar.cs" />
+    <Compile Include="Tool.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LayerConfigForm.resx">
+      <DependentUpon>LayerConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMIForm.resx">
+      <DependentUpon>HMIForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rs.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Rs.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NSDrawNodes\NSDrawNodes\NSDrawNodes.csproj">
+      <Project>{2ADB3A7D-3197-4836-A836-282AE500014A}</Project>
+      <Name>NSDrawNodes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NSDrawObj\NSDrawObj.csproj">
+      <Project>{53A670F8-A189-4376-AAC3-316E7A78EA7E}</Project>
+      <Name>NSDrawObj</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NSDrawVector\NSDrawVector.csproj">
+      <Project>{94026E61-BA90-4A5D-A4F0-3B510598553F}</Project>
+      <Name>NSDrawVector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NSHMIInterface\NSHMIInterface.csproj">
+      <Project>{7AEA7AFC-F0B8-4E79-8603-C0976F03BAD9}</Project>
+      <Name>NSHMIInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UndoMethods\UndoMethods.csproj">
+      <Project>{96F27934-2CE8-41E6-8BE5-F706E225BA0F}</Project>
+      <Name>UndoMethods</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XPTable\XPTable.csproj">
+      <Project>{1ADD2ECB-2B24-4162-8965-3EFAA9BB041E}</Project>
+      <Name>XPTable</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\front.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mouse.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\size.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignLeft.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignBottom.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignCenter.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignMiddle.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignRight.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignTop.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DecrVSpace.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HSpace.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IncrVSpace.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VSpace.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SameWidth.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SameHeight.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SameSize.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IncrHSpace.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DecrHSpace.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlipY.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlipX.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\property.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unGroup.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grid.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ortho.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layer.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(TargetPath)" "..\..\..\..\$(OutDir)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
